@@ -1,0 +1,6 @@
+# Die Backend-Interfaces von sabre/dav deklarieren ihre Arrays ohne Wertetypen.
+parameters:
+    ignoreErrors:
+        -
+            message: '#no value type specified in iterable type array#'
+            path: lib/Dav/AddressBookBackend.php

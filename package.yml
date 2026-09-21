@@ -1,0 +1,50 @@
+package: contacts
+version: '1.0.0-dev'
+author: 'KLXM Crossmedia GmbH'
+supportpage: https://github.com/KLXM/contacts/issues
+
+requires:
+    redaxo: ^5.18.0
+    php:
+        version: '>=8.4'
+        extensions: [json, mbstring, xml]
+    packages:
+        dav: '>=1.0.0-dev'
+
+default_config:
+    name_order: first_last
+    sort_by: last_name
+    custom_fields: ''
+    custom_labels: ''
+    public_blocked: ''
+
+page:
+    title: 'translate:contacts_title'
+    perm: 'contacts[]'
+    icon: rex-icon fa-address-book
+    subpages:
+        cards:
+            title: 'translate:contacts_cards'
+            icon: rex-icon fa-address-card
+        books:
+            title: 'translate:contacts_books'
+            icon: rex-icon fa-book
+            perm: 'contacts[books]'
+        carddav:
+            title: 'translate:contacts_carddav'
+            icon: rex-icon fa-mobile-screen
+        modules:
+            title: 'translate:contacts_modules'
+            icon: rex-icon fa-cubes
+            perm: admin
+        exchange:
+            title: 'translate:contacts_exchange'
+            icon: rex-icon fa-right-left
+        settings:
+            title: 'translate:contacts_settings'
+            icon: rex-icon fa-gear
+            perm: admin
+        docs:
+            title: 'translate:contacts_docs'
+            icon: rex-icon fa-circle-question
+            itemClass: pull-right
