@@ -48,3 +48,13 @@ page:
             title: 'translate:contacts_docs'
             icon: rex-icon fa-circle-question
             itemClass: pull-right
+# Nicht mit ausliefern: Entwicklungs- und Test-Artefakte.
+installer_ignore:
+    - .github
+    - .gitignore
+    - .phpunit.result.cache
+    - composer.json
+    - composer.lock
+    - phpstan.neon.dist
+    - phpunit.xml.dist
+    - tests
